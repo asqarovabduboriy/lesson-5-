@@ -1,0 +1,136 @@
+.header_one {
+    background: rgb(247, 235, 229);
+    padding: 15px;
+}
+
+.samll_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.samll_header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.samll_header ul li {
+    color: rgba(0, 0, 0, 0.79);
+    font-family: " Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.icons_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.icons_wrapper div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social_icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social_icons svg{
+    font-size: 24px;
+}
+
+.icons_wrapper div p {
+    color: rgba(0, 0, 0, 0.88);
+    font-family: " Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.rectangle{
+    border-radius: 50%;
+    background: rgb(231, 66, 106);
+    color: white;
+    width: 24px;
+    padding-left:5px;
+    padding-top:2px;
+    height:24px;
+}
+
+.active{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(0, 0, 0, 0.79);
+    font-family: " Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.big_header ul {
+    list-style: none;
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.big_header ul li {
+    color: rgb(43, 20, 20);
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.header_two{
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    padding: 15px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.active_none{
+    display: none;
+}
+
+.icons_wrapper div a{
+    color: rgba(0, 0, 0, 0.88);
+}
+
+
+.wrapper_product{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.title{
+    color: rgba(0, 0, 0, 0.88);
+    font-family: " Proxima Nova";
+    font-size: 44px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 20px 0;
+}

@@ -1,0 +1,116 @@
+.line {
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.product_img img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.vertikal {
+    border: 1px solid #ccc;
+    height: 30px;
+    margin-left: 120px;
+    transform: rotate(180.00deg);
+
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_info h2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    color: rgb(41, 41, 41);
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 300px;
+}
+
+.product_info {
+    padding: 10px;
+}
+
+.product_info p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: rgb(41, 41, 41);
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.product {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid rgb(237, 237, 240);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+
+}
+
+.flex_elemnt {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.price h3 {
+    color: rgb(231, 66, 106);
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.price button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.product:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.icons button {
+    background-color: transparent;
+    border: none;
+}
+
+.icons svg {
+    font-size: 20px;
+    color: rgb(231, 66, 106);
+}
