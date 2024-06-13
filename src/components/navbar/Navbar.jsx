@@ -19,7 +19,6 @@ const Navbar = () => {
 
       const addToCart = useSelector((state) => state.cart);
       const like = useSelector((state) => state.wishlist);
-      console.log(like);
 
   return (
     <>

@@ -13,7 +13,6 @@ const Product = () => {
   const addToCart = useSelector((state) => state.cart);
   const like = useSelector((state) => state.wishlist);
 
-  console.log(like);
 
   const product = data?.products?.map((prod) => (
     <div className="product" key={prod.id}>
