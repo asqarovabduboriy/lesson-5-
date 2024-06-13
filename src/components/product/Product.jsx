@@ -7,7 +7,7 @@ import { CiHeart } from "react-icons/ci";
 import { useSelector, useDispatch } from "react-redux";
 
 const Product = () => {
-  const { data } = useefekt("/products?limit=8");
+  const { data } = useefekt("/products");
 
   const dispatch = useDispatch();
   const addToCart = useSelector((state) => state.cart);
