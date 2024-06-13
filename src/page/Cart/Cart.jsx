@@ -8,6 +8,7 @@ import {
   decrementquantity,
   removeItem,
 } from "../../lib/action/action";
+import { NavLink } from "react-router-dom";
 
 const Cart = () => {
   const handleincrement = (id) => {
@@ -66,6 +67,9 @@ const Cart = () => {
   return (
     <>
       <div className="container">
+      <NavLink to="/" style={{ textDecoration: "none" }}>
+      <h1 style={{color:"red",textAlign:"center"}}>Go to Home</h1>
+      </NavLink>
         <div className="cart_wrapper">{carts}</div>
       </div>
     </>

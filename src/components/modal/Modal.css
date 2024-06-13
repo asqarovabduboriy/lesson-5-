@@ -1,0 +1,102 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+}
+
+.modal{
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 12;
+    animation: animate scale 0.5s;
+}
+
+@keyframes animate {
+    from{
+        transform: scale(0);
+        transform:translateX(-300px);
+    }
+    to{
+        transform: scale(1);
+        transform:translateX(0px);
+    }
+}
+
+.modal_img{
+    display: flex;
+    justify-content: center;
+}
+
+.modal_img img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.modal_info h2{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    color: rgb(41, 41, 41); 
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.modal_info p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    color: rgb(41, 41, 41); 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.modal_price {
+ display: flex;
+ align-items: center;
+ gap: 50px;
+}
+
+.modal_price h3{
+    color: rgb(231, 66, 106);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.modal_price button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal_close button{
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+}

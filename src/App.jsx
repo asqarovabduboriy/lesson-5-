@@ -6,6 +6,8 @@ import Cart from './page/Cart/Cart'
 import Like from './page/like/Like'
 import Footer from "./components/footer/Footer";
 
+
+
 function App() {
   return (
     <>

@@ -4,6 +4,7 @@ import { CiHeart } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaHeart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
+import { NavLink } from 'react-router-dom';
 
 const Like = () => {
     const like = useSelector((state) => state.wishlist);
@@ -42,6 +43,9 @@ const Like = () => {
   return (
     <>
       <div className="container">
+      <NavLink to="/" style={{ textDecoration: "none" }}>
+      <h1 style={{color:"red",textAlign:"center"}}>Go to Home</h1>
+      </NavLink>
         <h1 className="title">Wishlist</h1>
         <div className="wrapper_product">
             {products}

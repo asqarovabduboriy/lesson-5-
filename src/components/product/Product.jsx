@@ -1,18 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Product.css";
 import { useefekt } from "../../hook/useefekt";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { useSelector, useDispatch } from "react-redux";
+import {
+  useLocation,
+  useParams,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
+import axios from "axios";
+import Modal from '../../components/modal/Modal'
 
 const Product = () => {
+  const API = 'https://dummyjson.com/'
   const { data } = useefekt("/products?limit=8");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [detaildata, setDetaildata] = useState(null);
+
+useEffect(() => {
+  let id = searchParams.get("detail");
+  if (id) {
+    axios
+      .get(`${API}products/${id}`)
+      .then((response) => {
+        setDetaildata(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+}, [searchParams]);
+
+console.log(detaildata);
 
   const dispatch = useDispatch();
-  const addToCart = useSelector((state) => state.cart);
   const like = useSelector((state) => state.wishlist);
-
 
   const product = data?.products?.map((prod) => (
     <div className="product" key={prod.id}>
@@ -29,7 +54,11 @@ const Product = () => {
         </button>
       </div>
       <div className="product_img">
-        <img src={prod.images[0]} alt="" />
+        <img
+          onClick={() => setSearchParams({ detail: prod.id })}
+          src={prod.images[0]}
+          alt=""
+        />
       </div>
       <div className="product_info">
         <h2>{prod.title}</h2>
@@ -49,6 +78,32 @@ const Product = () => {
     <>
       <div className="container">
         <div className="flex_elemnt">{product}</div>
+         <Modal>
+            {
+              detaildata ? (
+                 <div className="overlay" onClick={() => setDetaildata(null)}> 
+                <div className="modal">
+                  <div className="modal_close">
+                    <button onClick={() => setDetaildata(null)}>x</button>
+                  </div>
+                  <div className="modal_img">
+                    <img src={detaildata.images[0]} alt="" />
+                  </div>
+                  <div className="modal_info">
+                    <h2>{detaildata.title}</h2>
+                    <p>{detaildata.description}</p>
+                    <div className="modal_price">
+                      <h3>{detaildata.price}руб</h3>
+                      <button onClick={() => dispatch({ type: "ADDCART", payload: detaildata })}>
+                        <FaCartShopping /> В корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              ) : null
+            }
+         </Modal>
       </div>
     </>
   );
